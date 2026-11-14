@@ -1,0 +1,30 @@
+# Neeraj Singh — portfolio site
+
+This repository contains the static source for the portfolio currently published at [neeraj1909.dev](https://neeraj1909.dev). The older [neeraj1909.github.io](https://neeraj1909.github.io/) remains a separate site with its own source repository.
+
+## Source files
+
+- `index.html` — home page and most portfolio copy.
+- `projects/index.html` and `research/index.html` — project and research pages.
+- `styles.css` — shared layout, typography, and responsive styling.
+- `assets/og-preview.png` — social preview image served by the site. `og-preview.svg` is the editable vector artwork used to make it.
+- `favicon.svg` — browser icon; `resume/` — downloadable résumé.
+- `build.mjs` — copies the site inputs into `dist/`.
+- `.openai/hosting.json` — Sites project identity and static output configuration (`dist`). Keep the existing project ID when updating this Site.
+
+Edit the source HTML and CSS, not the generated `dist/` copy. Update page titles, descriptions, canonical links, and Open Graph/Twitter metadata in each page's `<head>` when changing page content or its share preview.
+
+## Build and preview
+
+Requires Node.js and npm. From this directory:
+
+```sh
+npm run build
+python3 -m http.server 4173 --directory dist
+```
+
+Open <http://localhost:4173/>. The build removes and recreates `dist/`, copying the home page, `projects/`, `research/`, shared stylesheet, favicon, résumé, and `assets/`. Stop the preview server with Ctrl+C.
+
+## Release
+
+The Sites manifest targets the static `dist/` output. For a hosted update, follow the connected Sites workflow: push the intended source revision, save a version from that exact revision, then deploy the saved version. A successful Sites deployment reports the production URL. Local building and previewing do not publish changes. The legacy site is maintained separately.
