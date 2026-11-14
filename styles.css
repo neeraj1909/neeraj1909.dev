@@ -63,3 +63,9 @@
 .edge-a{left:25%;top:28%;width:52%;transform:rotate(24deg)}.edge-b{left:28%;top:70%;width:48%;transform:rotate(-24deg)}.edge-c{left:25%;top:29%;width:49%;transform:rotate(56deg)}
 .fin-node{position:absolute;z-index:1;padding:8px 9px;border:1px solid #6c775d;background:#151812;color:#d2d9c9;font:8px var(--mono);letter-spacing:.08em}
 .node-company{left:4%;top:18%}.node-filing{right:3%;top:31%}.node-supplier{left:8%;bottom:8%}.node-metric{right:9%;bottom:9%;color:var(--lime);border-color:#7b914f}
+
+.supporting-work{grid-template-columns:.55fr 1.45fr}
+.supporting-work .supporting-items{grid-column:2;grid-row:1;margin:0;width:100%}
+.supporting-work .supporting-items>span{padding-top:0}
+.supporting-work .supporting-items a{padding:14px 0}
+@media(max-width:760px){.supporting-work .supporting-items{grid-column:1;grid-row:auto;margin-top:0}}
