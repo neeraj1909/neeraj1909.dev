@@ -10,6 +10,7 @@ This repository contains the static source for the portfolio currently published
 - `assets/og-preview.png` — social preview image served by the site. `og-preview.svg` is the editable vector artwork used to make it.
 - `favicon.svg` — browser icon; `resume/` — downloadable résumé.
 - `build.mjs` — copies the site inputs into `dist/`.
+- `sitemap.xml` — lists the three canonical public pages; `robots.txt` points crawlers to it.
 - `.openai/hosting.json` — Sites project identity and static output configuration (`dist`). Keep the existing project ID when updating this Site.
 
 Edit the source HTML and CSS, not the generated `dist/` copy. Update page titles, descriptions, canonical links, and Open Graph/Twitter metadata in each page's `<head>` when changing page content or its share preview.
@@ -23,7 +24,9 @@ npm run build
 python3 -m http.server 4173 --directory dist
 ```
 
-Open <http://localhost:4173/>. The build removes and recreates `dist/`, copying the home page, `projects/`, `research/`, shared stylesheet, favicon, résumé, and `assets/`. Stop the preview server with Ctrl+C.
+Open <http://localhost:4173/>. The build removes and recreates `dist/`, copying the home page, `projects/`, `research/`, shared stylesheet, favicon, résumé, `assets/`, `sitemap.xml`, and `robots.txt`. Stop the preview server with Ctrl+C.
+
+Google describes a sitemap as a discovery and crawling hint; it does not guarantee that Google will crawl or index the listed URLs ([Google Search Central](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)).
 
 ## Release
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neeraj1909.dev/sitemap.xml
